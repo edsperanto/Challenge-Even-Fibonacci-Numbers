@@ -15,7 +15,9 @@ function _sumFibs( maxFibValue ) {
   // do your work here
   while(second <= maxFibValue) {
     //console.log(second);
-    sum += second;
+    if(second % 2 === 0) {
+      sum += second;
+    }
     holder = first + second;
     first = second;
     second = holder;
@@ -44,5 +46,3 @@ module.exports = {
   sumFibs : _sumFibs,
   highestFibonacciNumber : _highestFibonacciNumber
 };
-
-console.log(_sumFibs(13));
