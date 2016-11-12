@@ -10,7 +10,6 @@ function _sumFibs( maxFibValue ) {
   var first = 1;
   var second = 1;
   var holder = 0;
-  var third = 0;
 
   // do your work here
   while(second <= maxFibValue) {
