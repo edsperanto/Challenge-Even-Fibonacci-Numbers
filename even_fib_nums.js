@@ -7,8 +7,19 @@
  */
 function _sumFibs( maxFibValue ) {
   var sum = 0;
+  var first = 1;
+  var second = 1;
+  var holder = 0;
+  var third = 0;
 
   // do your work here
+  while(second <= maxFibValue) {
+    //console.log(second);
+    sum += second;
+    holder = first + second;
+    first = second;
+    second = holder;
+  }
 
   return sum;
 }
@@ -23,7 +34,7 @@ function _highestFibonacciNumber (maxFibValue){
   //do your work here
 
   return highest;
-};
+}
 
 /**
  * Do not modify code below.
@@ -33,3 +44,5 @@ module.exports = {
   sumFibs : _sumFibs,
   highestFibonacciNumber : _highestFibonacciNumber
 };
+
+console.log(_sumFibs(13));
