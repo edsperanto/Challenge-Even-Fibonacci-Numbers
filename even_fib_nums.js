@@ -27,10 +27,17 @@ function _sumFibs( maxFibValue ) {
 
 // bonus round
 function _highestFibonacciNumber (maxFibValue){
-  var highest = 0;
+  var highest = 1;
+  var second = 1;
+  var holder = 0;
 
   //define your base case, validate your input
-
+  while(second <= maxFibValue) {
+    //console.log(second);
+    holder = highest + second;
+    highest = second;
+    second = holder;
+  }
 
   //do your work here
 
